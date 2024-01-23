@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-users
+      author: kucherv
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column: {name: "email", value: "alice111@gmail.com"}
+              - column: {name: "password", value: "$2a$12$zmLqQy8d2XyJMcY81P.oQ.b1vCsL8EJAiLvlODUICtQKBh7VJQ6U6"} # "111"}
+              - column: {name: "first_name", value: "Alice"}
+              - column: {name: "last_name", value: "Alison"}
+
+        - insert:
+            tableName: users
+            columns:
+              - column: {name: "email", value: "Bob222@gmail.com"}
+              - column: {name: "password", value: "$2a$12$P/6fNMUiE9C8rPFymunCS.XUGxJMBcbbVxsxIDb8.vQp3e9fkueQC"} # "222"}
+              - column: {name: "first_name", value: "Bob"}
+              - column: {name: "last_name", value: "Bobson"}
+
+        - insert:
+            tableName: users
+            columns:
+              - column: {name: "email", value: "john333@gmail.com"}
+              - column: {name: "password", value: "$2a$12$cyV11p9/THIMjL7qiMMGMOZbmhXu9XBEQKoS/s7oIhu7/7qGBb6ZC"} # "333"}
+              - column: {name: "first_name", value: "John"}
+              - column: {name: "last_name", value: "Johnson"}

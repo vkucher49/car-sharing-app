@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-roles-table
+      author: kucherv
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name:  id
+                  type:  bigint
+                  autoIncrement:  true
+                  constraints:
+                    primaryKey:  true
+                    nullable:  false
+              - column:
+                  name: name
+                  type: enum('MANAGER','CUSTOMER')
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: is_deleted
+                  type: boolean
+                  constraints:
+                    nullable: false
+                  defaultValue: "false"
+      rollback:
+        - dropTable:
+            tableName: roles

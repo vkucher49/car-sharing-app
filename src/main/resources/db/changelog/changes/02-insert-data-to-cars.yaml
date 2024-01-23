@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-cars-table-with-data
+      author: kucherv
+      changes:
+        - insert:
+            tableName: cars
+            columns:
+              - column: {name: "model", value: "Mercedes-Benz"}
+              - column: {name: "brand", value: "GLE"}
+              - column: {name: "car_type", value: "SUV"}
+              - column: {name: "inventory", value: "1"}
+              - column: {name: "daily_fee", value: "165.50"}
+        - insert:
+            tableName: cars
+            columns:
+              - column: {name: "model", value: "Volkswagen"}
+              - column: {name: "brand", value: "Golf"}
+              - column: {name: "car_type", value: "HATCHBACK"}
+              - column: {name: "inventory", value: "4"}
+              - column: {name: "daily_fee", value: "124.00"}
+        - insert:
+            tableName: cars
+            columns:
+              - column: {name: "model", value: "Volkswagen"}
+              - column: {name: "brand", value: "Passat"}
+              - column: {name: "car_type", value: "SEDAN"}
+              - column: {name: "inventory", value: "3"}
+              - column: {name: "daily_fee", value: "111.70"}
+        - insert:
+            tableName: cars
+            columns:
+              - column: {name: "model", value: "Skoda"}
+              - column: {name: "brand", value: "Octavia"}
+              - column: {name: "car_type", value: "UNIVERSAL"}
+              - column: {name: "inventory", value: "7"}
+              - column: {name: "daily_fee", value: "95.35"}
